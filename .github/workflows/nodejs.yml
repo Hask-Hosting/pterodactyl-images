@@ -25,7 +25,7 @@ jobs:
         strategy:
             matrix:
                 tag:
-                    - buster/bytenode-lts
+                    - buster-bytenode-lts
         permissions:
             contents: read
             packages: write
