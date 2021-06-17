@@ -47,4 +47,4 @@ jobs:
                   file: ./nodejs/${{ matrix.tag }}/Dockerfile
                   platforms: linux/amd64
                   push: true
-                  tags: ghcr.io/Hask-Hosting/pterodactyl-images:${{ matrix.tag }}
+                  tags: ghcr.io/${{ github.repository }}:${{ matrix.tag }}
