@@ -23,10 +23,9 @@ jobs:
         name: 'pterodactyl-images:nodejs_${{ matrix.tag }}'
         runs-on: ubuntu-latest
         strategy:
-        fail-fast: false
-        matrix:
-            tag:
-                - buster/bytenode-lts
+            matrix:
+                tag:
+                    - buster/bytenode-lts
         permissions:
             contents: read
             packages: write
