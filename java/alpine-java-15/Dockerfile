@@ -1,4 +1,4 @@
-FROM        doptopenjdk:15-jre-hotspot
+FROM        adoptopenjdk:15-jre-hotspot
 
 LABEL       author="Linux123123" maintainer="linas.alexx@gmail.com"
 
