@@ -26,6 +26,7 @@ jobs:
             matrix:
                 tag:
                     - alpine-java-17
+                    - alpine-java-15
         permissions:
             contents: read
             packages: write
