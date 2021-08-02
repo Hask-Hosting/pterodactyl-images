@@ -1,9 +1,9 @@
-FROM        adoptopenjdk:15-jre-hotspot
+FROM        adoptopenjdk/openjdk15:alpine
 
 LABEL       author="Linux123123" maintainer="linas.alexx@gmail.com"
 
-RUN         apt-get update && apt-get -y ca-certificates curl fontconfig git openssl sqlite tar tzdata \
-				&& adduser -D -h /home/container container
+RUN         apk add --update --no-cache ca-certificates curl fontconfig git openssl sqlite tar tzdata \
+			    && adduser -D -h /home/container container
 
 USER        container
 ENV         USER=container HOME=/home/container
