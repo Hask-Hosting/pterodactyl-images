@@ -25,6 +25,7 @@ jobs:
         strategy:
             matrix:
                 tag:
+                    - alpine-java-11
                     - alpine-java-17
                     - alpine-java-15
         permissions:
