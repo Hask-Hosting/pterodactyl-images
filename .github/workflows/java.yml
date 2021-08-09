@@ -25,9 +25,10 @@ jobs:
         strategy:
             matrix:
                 tag:
-                    - alpine-java-11
-                    - alpine-java-17
-                    - alpine-java-15
+                    - java-11
+                    - java-15
+                    - java-j9-11
+                    - java-j9-15
         permissions:
             contents: read
             packages: write

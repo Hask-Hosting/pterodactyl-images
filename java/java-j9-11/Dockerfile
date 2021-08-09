@@ -1,4 +1,4 @@
-FROM        openjdk:17-alpine
+FROM        adoptopenjdk/openjdk11-openj9:alpine-jre
 
 LABEL       author="Linux123123" maintainer="linas.alexx@gmail.com"
 
