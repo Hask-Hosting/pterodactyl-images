@@ -20,12 +20,12 @@ env:
 
 jobs:
     push:
-        name: 'pterodactyl-images:nodejs_${{ matrix.tag }}'
+        name: 'pterodactyl-images:nodejs-${{ matrix.tag }}'
         runs-on: ubuntu-latest
         strategy:
             matrix:
                 tag:
-                    - buster-bytenode-lts
+                    - bytenode
         permissions:
             contents: read
             packages: write
@@ -47,4 +47,4 @@ jobs:
                   file: ./nodejs/${{ matrix.tag }}/Dockerfile
                   platforms: linux/amd64
                   push: true
-                  tags: ghcr.io/hask-hosting/pterodactyl-images:${{ matrix.tag }}
+                  tags: ghcr.io/hask-hosting/pterodactyl-images:nodejs-${{ matrix.tag }}

@@ -20,15 +20,15 @@ env:
 
 jobs:
     push:
-        name: 'pterodactyl-images:nodejs_${{ matrix.tag }}'
+        name: 'pterodactyl-images:java-${{ matrix.tag }}'
         runs-on: ubuntu-latest
         strategy:
             matrix:
                 tag:
-                    - java-11
-                    - java-15
-                    - java-j9-11
-                    - java-j9-15
+                    - 11
+                    - 15
+                    - j9-11
+                    - j9-15
         permissions:
             contents: read
             packages: write
@@ -50,4 +50,4 @@ jobs:
                   file: ./java/${{ matrix.tag }}/Dockerfile
                   platforms: linux/amd64
                   push: true
-                  tags: ghcr.io/hask-hosting/pterodactyl-images:${{ matrix.tag }}
+                  tags: ghcr.io/hask-hosting/pterodactyl-images:java-${{ matrix.tag }}
